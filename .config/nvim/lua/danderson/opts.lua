@@ -15,3 +15,9 @@ opt.shiftwidth = 4
 opt.softtabstop = 4
 opt.tabstop = 4
 
+function ColorMyPencils(color)
+    color = color or "nightfly"
+    vim.cmd.colorscheme(color)
+
+end
+ColorMyPencils()

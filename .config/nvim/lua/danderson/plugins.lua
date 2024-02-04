@@ -12,16 +12,35 @@ end
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
-  use 'wbthomason/packer.nvim'
-  -- My plugins here
-  -- use 'foo1/bar1.nvim'
-  -- use 'foo2/bar2.nvim'
+    use 'wbthomason/packer.nvim'
+    -- My plugins here
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.5',
+        -- or                            , branch = '0.1.x',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
 
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if packer_bootstrap then
-    require('packer').sync()
-  end
+    use ({
+        'bluz71/vim-nightfly-colors',
+        as = 'nightfly',
+        config = function()
+            vim.cmd('colorscheme nightfly')
+        end
+    })
+
+    use (
+        'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}
+    )
+
+    use 'nvim-treesitter/playground'
+    use 'mbbill/undotree'
+    use 'tpope/vim-fugitive'
+
+    -- Automatically set up your configuration after cloning packer.nvim
+    -- Put this at the end after all plugins
+    if packer_bootstrap then
+        require('packer').sync()
+    end
 end)
 
 
