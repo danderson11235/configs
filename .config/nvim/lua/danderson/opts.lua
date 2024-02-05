@@ -4,6 +4,7 @@ opt.colorcolumn = '80'
 opt.number = true
 opt.relativenumber = true
 opt.scrolloff = 4
+opt.wrap = false
 
 opt.syntax = "ON"
 opt.termguicolors = true
