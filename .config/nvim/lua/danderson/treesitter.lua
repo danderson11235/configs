@@ -22,3 +22,15 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = false,
   },
 }
+
+-- local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
+-- parser_config.vhdl = {
+--     install_info = {
+--         url = "",
+--         files = {"src/parser.c"},
+--         branch = "main",
+--         generate+requires_npm = false,
+--         requires_generate_from_grammer = false, -- if folder contains pregenerated src/parser.c
+--     },
+--     filetype = "vhd",
+-- }
