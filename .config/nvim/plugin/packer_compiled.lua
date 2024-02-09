@@ -105,6 +105,11 @@ _G.packer_plugins = {
     path = "/home/danderson/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["tree-sitter-tcl"] = {
+    loaded = true,
+    path = "/home/danderson/.local/share/nvim/site/pack/packer/start/tree-sitter-tcl",
+    url = "https://github.com/lewis6991/tree-sitter-tcl"
+  },
   undotree = {
     loaded = true,
     path = "/home/danderson/.local/share/nvim/site/pack/packer/start/undotree",

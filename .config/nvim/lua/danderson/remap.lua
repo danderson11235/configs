@@ -17,6 +17,18 @@ vim.keymap.set("n", "ZZ", "mZ:wq<CR>")
 vim.keymap.set("n", "<Leader>bb", "'Z")
 vim.keymap.set("n", "<Leader>bw", "<C-w>s<C-w>j'Z")
 
+vim.keymap.set("t", "<A-h>", "<C-\\><C-n><C-w>h")
+vim.keymap.set("t", "<A-j>", "<C-\\><C-n><C-w>j")
+vim.keymap.set("t", "<A-k>", "<C-\\><C-n><C-w>k")
+vim.keymap.set("t", "<A-l>", "<C-\\><C-n><C-w>l")
+vim.keymap.set("n", "<A-h>", "<C-w>h")
+vim.keymap.set("n", "<A-j>", "<C-w>j")
+vim.keymap.set("n", "<A-k>", "<C-w>k")
+vim.keymap.set("n", "<A-l>", "<C-w>l")
+
+vim.keymap.set("n", "<Leader>dt", vim.cmd.diffthis)
+vim.keymap.set("n", "<Leader>do", vim.cmd.diffoff)
+
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>df', builtin.find_files, {})
 vim.keymap.set('n', '<A-d>', builtin.git_files, {})
