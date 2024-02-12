@@ -126,3 +126,4 @@ alias "remake=make clean && make"
 alias "python=python3"
 alias "vim=nvim"
 
+export PATH=$PATH:/home/danderson/development/rust_hdl/target/debug
