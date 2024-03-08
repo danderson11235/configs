@@ -1,7 +1,7 @@
 [libraries]
 bre.files = [
-    '../lib/common/hdl/pkg/*.vhd',
-    '../lib/common/hdl/src/vhdl/*.vhd'
+    '~/gitlab/common/hdl/pkg/*.vhd',
+    '~/gitlab/common/hdl/src/vhdl/*.vhd'
 ]
 
 UNISIM.files = [

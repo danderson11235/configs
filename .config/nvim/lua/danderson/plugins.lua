@@ -36,13 +36,19 @@ return require('packer').startup(function(use)
     use 'mbbill/undotree'
     use 'tpope/vim-fugitive'
 
+    use 'rafamadriz/friendly-snippets'
+    use ({
+        'L3MON4D3/LuaSnip',
+        version = "v2.*",
+        run = "make install_jsregexp"
+    })
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
         requires = {
             --- Uncomment the two plugins below if you want to manage the language servers from neovim
-            -- {'williamboman/mason.nvim'},
-            -- {'williamboman/mason-lspconfig.nvim'},
+            {'williamboman/mason.nvim'},
+            {'williamboman/mason-lspconfig.nvim'},
 
             -- LSP Support
             {'neovim/nvim-lspconfig'},
@@ -51,6 +57,11 @@ return require('packer').startup(function(use)
             {'hrsh7th/cmp-nvim-lsp'},
             {'L3MON4D3/LuaSnip'},
         }
+    }
+
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 
     -- Automatically set up your configuration after cloning packer.nvim
