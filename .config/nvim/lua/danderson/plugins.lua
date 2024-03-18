@@ -54,8 +54,10 @@ return require('packer').startup(function(use)
             {'neovim/nvim-lspconfig'},
             -- Autocompletion
             {'hrsh7th/nvim-cmp'},
+            {'hrsh7th/cmp-buffer'},
             {'hrsh7th/cmp-nvim-lsp'},
             {'L3MON4D3/LuaSnip'},
+            {'saadparwaiz1/cmp_luasnip'},
         }
     }
 
