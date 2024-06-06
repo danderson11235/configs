@@ -29,6 +29,9 @@ vim.keymap.set("n", "<A-l>", "<C-w>l")
 vim.keymap.set("n", "<Leader>dt", vim.cmd.diffthis)
 vim.keymap.set("n", "<Leader>do", vim.cmd.diffoff)
 
+vim.keymap.set('n', "<Leader>e", vim.diagnostic.goto_next)
+vim.keymap.set('n', "<Leader>E", vim.diagnostic.goto_prev)
+
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>df', builtin.find_files, {})
 vim.keymap.set('n', '<A-d>', builtin.git_files, {})
