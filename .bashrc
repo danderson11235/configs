@@ -116,8 +116,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-XILINXD_LICENSE_FILE=2100@hwusers
 source ~/setup_vivado_2022_1.sh
+XILINXD_LICENSE_FILE=2200@HWUSERS:2100@HWUSERS
 export PROJECT_PART="xqzu19eg-ffrb1517-2-i"
 
 alias "..=cd ../"
@@ -126,5 +126,6 @@ alias "remake=make clean && make"
 alias "python=python3"
 alias "vim=nvim"
 
-export PATH="$PATH:/home/danderson/development/rust_hdl/target/release"
-export PATH="$PATH:/home/danderson/development/rust_hdl/target/debug"
+export PATH="/usr/bin/python3:$PATH"
+export PATH="$PATH:/home/danderson/development/rust_hdl/target/release/"
+export PATH="$PATH:/home/danderson/development/rust_hdl/target/debug/"
